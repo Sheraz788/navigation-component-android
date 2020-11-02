@@ -3,6 +3,7 @@ package com.example.navigationcomponent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_welcome.*
 
@@ -18,7 +19,8 @@ class WelcomeFragment : Fragment(R.layout.fragment_welcome) {
         textview_password.text = args.password
 
         btn_ok.setOnClickListener {
-            //val action =
+            val action = WelcomeFragmentDirections.actionWelcomeFragmentToHomeFragment()
+            findNavController().navigate(action)
         }
     }
 }
