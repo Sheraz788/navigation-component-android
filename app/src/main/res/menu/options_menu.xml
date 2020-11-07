@@ -4,9 +4,15 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/settings_menu"
+        android:id="@+id/settingsFragment"
         android:title="Settings"
+        android:menuCategory="secondary"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/termsAndConditions"
+        android:title="Terms &amp; Conditions"
+        app:showAsAction="withText"/>
 
     <item
         android:id="@+id/btn_upload"
