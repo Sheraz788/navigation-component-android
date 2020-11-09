@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         bottom_nav.setupWithNavController(navController) //used to attach bottom navigation with nav controller
-        nav_view.setupWithNavController(navController)
+        nav_view.setupWithNavController(navController)  //used to attach navigation view with nav controller
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -39,8 +39,9 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    //when menu option selected
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return if (item.itemId == R.id.termsAndConditions){
+        return if (item.itemId == R.id.termsAndConditions){ //handled using navigation component using global actions
             val action = NavGraphDirections.actionGlobalNotificationsFragment()
             navController.navigate(action)
             true
